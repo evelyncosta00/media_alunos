@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float  np1,np2, np3; // declarar as variaveis decimais
+float resultado; // variavel de resultado
+float exame; // variavel de exame
+printf("Digite a nota NP1: \n"); // mostrar nota np1
+scanf("%f", &np1); // armazenar np1
+
+printf("Digite a nota NP2: \n"); // mostrar nota np2
+scanf("%f", &np2); // armazenar np2
+
+
+if(np1>= 0)
+        if(np1<=10)
+            if(np2>=0)
+                if(np2<=10){
+
+resultado = (np1 + np2)/2; // equação de media np1 + np2
+if (resultado >= 6.75) // se resultado for igual ou maior que 6.75
+{
+if (resultado <= 7) // se resultado for igual ou menor que 7
+{
+printf("Arredondamento automatico\n"); // mostrar mensagem na tela
+printf("APROVADO!!!\n");// mostrar mensagem na tela
+printf("resultado: 7");// mostrar mensagem na tela
+}
+}
+if (resultado > 7) // se resultado for maior que 7
+{
+printf("MEDIA: %.2f\n", resultado); // mostrar mensagem na tela
+printf("APROVADO!!!\n");// mostrar mensagem na tela
+}
+
+if (resultado < 6.75) // se resultado for menor que 6.75
+{
+printf("Solicitar nota de exame: \n"); // solicita nota do exame
+scanf("%f", &np3); // armazena nota do exame
+exame = (resultado + np3) /2; // equação do exame
+if (exame >= 5) // se exame for igual ou maior que 5
+{
+printf("MEDIA: %.2f\n", exame);// mostrar mensagem na tela
+printf ("APROVADO!!!\n");// mostrar mensagem na tela
+}
+}
+if (exame >= 4.75) // se exame for igual ou maior que 4.75
+{
+if (exame <= 5) // se exame for igual ou menor a 5
+{
+printf("Arredondamento automatico do exame\n");// mostrar mensagem na tela
+printf("APROVADO!!!\n");// mostrar mensagem na tela
+printf("resultado: 5");// mostrar mensagem na tela
+}
+}
+if (exame<=4.75) // se exame for igual ou menor que 4.75
+{
+printf("REPROVADO!!!\n"); // mostrar mensagem na tela
+printf("Resultado: %.2f", exame); // mostrar mensagem na tela
+}
+
+
+    printf("digite a nota NP1",np1);
+    scanf("%.2f",&np1);
+
+        }
+    printf("digite novamente");
+
+    return 0;
+}
